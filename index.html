@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Appointment System</title>
+</head>
+<body>
+
+    <center>
+        <h1>City Care Hospital</h1>
+        <h3>Online Doctor Appointment Form</h3>
+    </center>
+    <hr>
+
+    <form action="#" method="post">
+
+        <!-- 1. Patient Details -->
+        <fieldset>
+            <legend><b>Patient Details</b></legend>
+
+            <label for="pname">Full Name:</label><br>
+            <input type="text" id="pname" name="pname" placeholder="Enter your full name" required><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., 9876543210" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com"><br><br>
+        </fieldset>
+        <br>
+
+        <!-- 2. Doctor Selection & Appointment Date/Time -->
+        <fieldset>
+            <legend><b>Doctor &amp; Appointment Schedule</b></legend>
+
+            <label for="department">Select Department:</label><br>
+            <select id="department" name="department" required>
+                <option value="">-- Choose Department --</option>
+                <option value="general">General Medicine</option>
+                <option value="cardiology">Cardiology (Heart)</option>
+                <option value="orthopedics">Orthopedics (Bones)</option>
+                <option value="dermatology">Dermatology (Skin)</option>
+                <option value="pediatrics">Pediatrics (Child Care)</option>
+            </select><br><br>
+
+            <label for="doctor">Select Doctor:</label><br>
+            <select id="doctor" name="doctor" required>
+                <option value="">-- Choose Doctor --</option>
+                <option value="dr_sharma">Dr. R. K. Sharma (General Physician)</option>
+                <option value="dr_verma">Dr. Priya Verma (Cardiologist)</option>
+                <option value="dr_singh">Dr. Harpreet Singh (Orthopedic)</option>
+                <option value="dr_gupta">Dr. Neha Gupta (Dermatologist)</option>
+                <option value="dr_khan">Dr. A. Khan (Pediatrician)</option>
+            </select><br><br>
+
+            <label for="app_date">Appointment Date:</label><br>
+            <input type="date" id="app_date" name="app_date" required><br><br>
+
+            <label for="app_time">Preferred Time:</label><br>
+            <input type="time" id="app_time" name="app_time" required><br><br>
+        </fieldset>
+        <br>
+
+        <!-- 3. Disease Description -->
+        <fieldset>
+            <legend><b>Disease / Symptoms Description</b></legend>
+
+            <label for="symptoms">Describe your health issue or symptoms:</label><br>
+            <textarea id="symptoms" name="symptoms" rows="5" cols="45" placeholder="Write your symptoms, duration, or any previous medical history here..." required></textarea><br><br>
+        </fieldset>
+        <br>
+
+        <!-- 4. Payment Option -->
+        <fieldset>
+            <legend><b>Payment Option (Consultation Fee: ₹500)</b></legend>
+
+            <input type="radio" id="cash" name="payment" value="Cash at Hospital" required>
+            <label for="cash">Pay Cash at Hospital Counter</label><br>
+
+            <input type="radio" id="upi" name="payment" value="UPI">
+            <label for="upi">UPI (Google Pay / PhonePe / Paytm)</label><br>
+
+            <input type="radio" id="card" name="payment" value="Card">
+            <label for="card">Debit / Credit Card</label><br>
+
+            <input type="radio" id="netbanking" name="payment" value="Net Banking">
+            <label for="netbanking">Net Banking</label><br><br>
+        </fieldset>
+        <br>
+
+        <!-- 5. Submit Button -->
+        <center>
+            <input type="submit" value="Book Appointment">
+            <input type="reset" value="Reset Form">
+        </center>
+
+    </form>
+
+</body>
+</html>
